@@ -6,8 +6,8 @@ import (
 
 type Filtered struct {
 	Base
-	Aggregator builder.Aggregator
-	Filter     builder.Filter
+	Aggregator builder.Aggregator `json:"aggregator,omitempty"`
+	Filter     builder.Filter `json:"filter,omitempty"`
 }
 
 func NewFiltered() *Filtered {
