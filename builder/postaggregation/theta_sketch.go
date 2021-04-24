@@ -20,6 +20,6 @@ func (f *ThetaSketch) SetName(name string) *ThetaSketch {
 }
 
 func (f *ThetaSketch) SetField(fa *FieldAccess) *ThetaSketch {
-	f.Field = &fa 
+	f.Field = *fa 
 	return f
 }
