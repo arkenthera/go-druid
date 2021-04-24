@@ -1,9 +1,5 @@
 package postaggregation
 
-import (
-	"github.com/grafadruid/go-druid/builder"
-)
-
 type ThetaSketch struct {
 	Base
 	Type string `json:"type,omitempty"`
@@ -23,7 +19,7 @@ func (f *ThetaSketch) SetName(name string) *ThetaSketch {
 	return f
 }
 
-func (f *ThetaSketch) SetField(f FieldAccess) *ThetaSketch {
-	f.Field = field 
+func (f *ThetaSketch) SetField(fa FieldAccess) *ThetaSketch {
+	f.Field = fa 
 	return f
 }
