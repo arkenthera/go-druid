@@ -3,8 +3,8 @@ package postaggregation
 type ThetaSketch struct {
 	Base
 	Type string `json:"type,omitempty"`
-	Name string `json:"name,omitempty`
-	Field FieldAccess `json:"field,omitempty`
+	Name string `json:"name,omitempty"`
+	Field FieldAccess `json:"field,omitempty"`
 }
 
 
@@ -19,7 +19,7 @@ func (f *ThetaSketch) SetName(name string) *ThetaSketch {
 	return f
 }
 
-func (f *ThetaSketch) SetField(fa FieldAccess) *ThetaSketch {
-	f.Field = fa 
+func (f *ThetaSketch) SetField(fa *FieldAccess) *ThetaSketch {
+	f.Field = &fa 
 	return f
 }
