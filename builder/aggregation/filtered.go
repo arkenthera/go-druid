@@ -1,9 +1,13 @@
 package aggregation
 
+import (
+	"github.com/grafadruid/go-druid/builder"
+)
+
 type Filtered struct {
 	Base
-	Aggregator string
-	Filter     string
+	Aggregator builder.Aggregator
+	Filter     builder.Filter
 }
 
 func NewFiltered() *Filtered {
