@@ -2,7 +2,6 @@ package postaggregation
 
 type ThetaSketch struct {
 	Base
-	Name string `json:"name,omitempty"`
 	Field FieldAccess `json:"field,omitempty"`
 }
 
