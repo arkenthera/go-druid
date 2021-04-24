@@ -11,6 +11,11 @@ type Query struct {
 	Query builder.Query `json:"-,omitempty"`
 }
 
+type SubQuery struct {
+	Base
+	Query builder.Query `json:"query,omitempty"`
+}
+
 func NewQuery() *Query {
 	q := &Query{}
 	q.SetType("query")
