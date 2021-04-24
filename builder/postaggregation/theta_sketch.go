@@ -5,6 +5,7 @@ import (
 )
 
 type ThetaSketch struct {
+	Base
 	Type string `json:"type,omitempty"`
 	Name string `json:"name,omitempty`
 	Field FieldAccess `json:"field,omitempty`
