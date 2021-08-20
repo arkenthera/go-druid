@@ -8,16 +8,16 @@ import (
 )
 
 type Base struct {
-	Typ builder.ComponentType
+	Type builder.ComponentType
 }
 
 func (b *Base) SetType(typ builder.ComponentType) *Base {
-	b.Typ = typ
+	b.Type = typ
 	return b
 }
 
 func (b *Base) Type() builder.ComponentType {
-	return b.Typ
+	return b.Type
 }
 
 func Load(data []byte) (builder.LimitSpec, error) {
@@ -26,12 +26,12 @@ func Load(data []byte) (builder.LimitSpec, error) {
 		return l, nil
 	}
 	var t struct {
-		Typ builder.ComponentType `json:"type,omitempty"`
+		Type builder.ComponentType `json:"type,omitempty"`
 	}
 	if err := json.Unmarshal(data, &t); err != nil {
 		return nil, err
 	}
-	switch t.Typ {
+	switch t.Type {
 	case "default":
 		l = NewDefault()
 	default:
