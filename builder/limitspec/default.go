@@ -14,7 +14,7 @@ const (
 type OrderByColumnSpec struct {
 	Dimension           string                 `json:"dimension,omitempty"`
 	Direction           Direction              `json:"direction,omitempty"`
-	DimensionComparator types.StringComparator `json:"dimensionComparator,omitempty"`
+	DimensionComparator types.StringComparator `json:"dimensionOrder,omitempty"`
 }
 
 type Default struct {
