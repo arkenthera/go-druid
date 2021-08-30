@@ -8,7 +8,7 @@ import (
 
 type Query struct {
 	Base
-	Query builder.Query `json:"-,omitempty"`
+	Query builder.Query `json:"query,omitempty"`
 }
 
 type SubQuery struct {
