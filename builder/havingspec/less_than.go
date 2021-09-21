@@ -3,7 +3,7 @@ package havingspec
 type LessThan struct {
 	Base
 	Aggregation string  `json:"aggregation,omitempty"`
-	Value       float64 `json:"value,omitempty"`
+	Value       float64 `json:"value"`
 }
 
 func NewLessThan() *LessThan {
